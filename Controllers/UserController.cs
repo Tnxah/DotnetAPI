@@ -156,8 +156,7 @@ namespace DotnetAPI.Controllers
             string sql = @$"
                 UPDATE TutorialAppSchema.UserSalary
                     SET 
-                    [Salary] = '{userSalary.Salary}',
-                    [AvgSalary] = '{userSalary.AvgSalary}'
+                    [Salary] = '{userSalary.Salary}'
                 WHERE UserId = '{userSalary.UserId}'
             ";
 
@@ -174,11 +173,9 @@ namespace DotnetAPI.Controllers
                 INSERT INTO TutorialAppSchema.UserSalary(
                     [UserId],
                     [Salary],
-                    [AvgSalary]
                 ) VALUES (
                     '{userSalary.UserId}',
-                    '{userSalary.Salary}',
-                    '{userSalary.AvgSalary}'
+                    '{userSalary.Salary}'
                 )
             ";
 
