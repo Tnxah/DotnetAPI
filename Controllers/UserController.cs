@@ -80,19 +80,19 @@ namespace DotnetAPI.Controllers
         public IActionResult AddUser(UserToAddDto user)
         {
             string sql = @$"
-        INSERT INTO TutorialAppSchema.Users(
-            [FirstName],
-            [LastName],
-            [Email],
-            [Gender],
-            [Active]
-        ) VALUES (
-            '{user.FirstName}',
-            '{user.LastName}',
-            '{user.Email}',
-            '{user.Gender}',
-            '{user.Active}'
-        )";
+                INSERT INTO TutorialAppSchema.Users(
+                    [FirstName],
+                    [LastName],
+                    [Email],
+                    [Gender],
+                    [Active]
+                ) VALUES (
+                    '{user.FirstName}',
+                    '{user.LastName}',
+                    '{user.Email}',
+                    '{user.Gender}',
+                    '{user.Active}'
+                )";
 
             if (_dapper.ExecuteSql(sql))
                 return Ok();
